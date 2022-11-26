@@ -17,6 +17,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('name')->nullable(false);
             $table->float('price', 8, 2)->nullable(true);
+            $table->unsignedTinyInteger('parent_id')->nullable(false);
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->nullable()->useCurrentOnUpdate();
         });
